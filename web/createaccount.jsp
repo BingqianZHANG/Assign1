@@ -78,7 +78,7 @@
 				        
                                                 </div>
 					<div class="clear"> </div>
-				<!--  End-of login elements  -->
+				<!--  End-of sign up elements  -->
 				
 				<div class="gallery">
 					

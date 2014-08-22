@@ -11,7 +11,7 @@
 <title>Welcome to Join Us</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="./css/style.css" rel="stylesheet" type="text/css"  media="all" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="https://ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -47,8 +47,14 @@
 						
 					</div>
 						<!--  end-header -->
-						
-				<!--  End-of  elements  -->
+                                                
+                                                <!--start of side bar-->
+                                                
+                                                <!--end of side bar-->
+                                                
+				<!--start of adding form-->
+                          
+				<!--  End-of adding form-->
 				
 				<div class="gallery">
 					
