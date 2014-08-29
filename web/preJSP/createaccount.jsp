@@ -52,31 +52,32 @@
                                                 <div class="slider" style="width:100%; height: 500px;">
                                                     
                                                     <div class="content">
-					<div style="position: relative;left: 40%; " class="side-bar">
-						<h1>Sign Up Now</h1>
-                                                <h1> </h1>
-						<div class="side-bar-from">
-							
-                                                            <form>
-                                                                <table>
-                                                                    
-                                                                    <tr><td><p>User Name (E-mail Address ):</p></td></tr>
-                                                                    <tr><td><input type="text"></td></tr>
-                                                                    <tr><td><p>Agency No.:</p></td></tr>
-                                                                    <tr><td><input type="text"></td></tr>
-                                                                    <tr><td><p>Password:</p></td></tr>
-                                                                    <tr><td><input type="text"></td></tr>
-                                                                    <tr><td><p>Confirm Password:</p></td></tr>
-                                                                    <tr><td><input type="text"></td></tr>
-                                                                    <tr><td><input type="submit" value="Sign Up"></td></tr>
-                                                                </table>
-                                                               
-                                                            </form>    
-					</div>
-				</div>
-					        
+                                                            <div style="position: relative;left: 40%; " class="side-bar">
+                                                                    <h1>Sign Up Now</h1>
+                                                                    <h1> </h1>
+                                                                    <div class="side-bar-from">
+
+                                                                                <form>
+                                                                                    <table>
+
+                                                                                        <tr><td><p>User Name (E-mail Address ):</p></td></tr>
+                                                                                        <tr><td><input type="text"></td></tr>
+                                                                                        <tr><td><p>Agency No.:</p></td></tr>
+                                                                                        <tr><td><input type="text"></td></tr>
+                                                                                        <tr><td><p>Password:</p></td></tr>
+                                                                                        <tr><td><input type="text"></td></tr>
+                                                                                        <tr><td><p>Confirm Password:</p></td></tr>
+                                                                                        <tr><td><input type="text"></td></tr>
+                                                                                        <tr><td><input type="submit" value="Sign Up"></td></tr>
+                                                                                    </table>
+
+                                                                                </form>    
+                                                                    </div>
+                                                            </div>
+                                                    </div>
 				        
                                                 </div>
+                                                    
 					<div class="clear"> </div>
 				<!--  End-of sign up elements  -->
 				
