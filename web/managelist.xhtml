@@ -56,7 +56,12 @@
                                                                 <h2>Property list</h2>
                                                                     <h1> </h1>
                                                                     <h:dataTable  var="ad"  value="#{managelistController.ads}">
-                                                                           
+                                                                          <h:column>
+                                                                                <f:facet name="header">
+                                                                                    id
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.id}"/>
+                                                                            </h:column>  
                                                                             <h:column>
                                                                                 <f:facet name="header">
                                                                                     Property Type
