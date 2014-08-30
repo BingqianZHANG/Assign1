@@ -2,11 +2,17 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="viewlist.jsp" x="150" y="150" zoom="true"/>
-        <Node id="createadd.jsp" x="150" y="300" zoom="true"/>
-        <Node id="Welcome.xhtml" x="400" y="300" zoom="true"/>
-        <Node id="createaccount.jsp" x="400" y="150" zoom="true"/>
-        <Node id="index.html" x="650" y="150" zoom="true"/>
+        <Node id="deletead.xhtml" x="409" y="301" zoom="true"/>
+        <Node id="preJSP/createadd.jsp" x="671" y="93" zoom="true"/>
+        <Node id="viewlist.xhtml" x="133" y="122" zoom="true"/>
+        <Node id="preJSP/viewlist.jsp" x="741" y="190" zoom="true"/>
+        <Node id="welcome.xhtml" x="137" y="50" zoom="true"/>
+        <Node id="editad.xhtml" x="404" y="231" zoom="true"/>
+        <Node id="createad.xhtml" x="406" y="151" zoom="true"/>
+        <Node id="preJSP/index.html" x="706" y="142" zoom="true"/>
+        <Node id="preJSP/createaccount.jsp" x="660" y="60" zoom="true"/>
+        <Node id="createaccount.xhtml" x="101" y="207" zoom="true"/>
+        <Node id="managelist.xhtml" x="400" y="84" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

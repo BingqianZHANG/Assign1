@@ -15,4 +15,24 @@ public class AdController implements Serializable {
     public Ad getAd() {
         return ad;
     }
+    
+    
+    public String saveAsnew(){
+        AdDatabase.create(ad);
+        return "managelist?faces-redirect=true";
+    }
+    
+    public void loadAd(int index){
+        ad = AdDatabase.read(index);
+    }
+    
+    public String saveChanges(){
+        AdDatabase.update(ad);
+        return "managelist?faces-redirect=true";
+    }
+    
+    public String delete(){
+        AdDatabase.delete(ad.getId());
+        return "managelist?faces-redirect=true";
+    }
 }    
