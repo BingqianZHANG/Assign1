@@ -64,10 +64,15 @@
                                                 
 				<!--start of adding agency property list-->
                                                     <div class="content">
-                                                            <div style="position: relative;left: 10px; width: auto " class="side-bar">
+                                                            <div style="position: relative;left: 10px; width: 700px " class="side-bar">
                                                                 <h2>Property list</h2>
                                                                     <h1> </h1>
-                                                                    <h:dataTable  var="ad"  value="#{adController.allAds}" style="text-align: center; ">
+                                                                    <h:dataTable  var="ad"  value="#{adController.allAds}" style="text-align: center; "
+                                                                                  styleClass="datatable" 
+                                                                                  rowClasses="list-row1-background ,list-row2-background" 
+                                                                                  columnClasses="list-column1-center,list-column2-center,list-column3-center,
+                                                                                                 list-column4-center,list-column5-center,list-column6-center"
+                                                                                  headerClass="tableheader">
                                                                             <h:column>
                                                                                 <f:facet name="header">
                                                                                     Address

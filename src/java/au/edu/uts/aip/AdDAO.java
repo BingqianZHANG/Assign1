@@ -33,7 +33,7 @@ public class AdDAO {
         return result;
     }
 
-   
+   //find all ads
     public ArrayList<AdDTO> findAll() throws DataStoreException {
         ArrayList<AdDTO> results = new ArrayList<>();
         try {
@@ -52,8 +52,8 @@ public class AdDAO {
         return results;
     }
     
-     
-    public AdDTO findAddress(String address) throws DataStoreException {
+    //find a certain ad with selected address 
+    public AdDTO findAd(String address) throws DataStoreException {
         try {
             DataSource ds = InitialContext.doLookup(JNDI_NAME);
             try (Connection conn = ds.getConnection();

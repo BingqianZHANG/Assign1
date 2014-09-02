@@ -123,6 +123,51 @@ body{
 	background: #252525;
 }
 
+/*--dataTable style start--*/
+//style of table
+.datatable {width:674px;margin:0 auto;text-align:center;}  
+//style of each column
+.list-column1-center {
+  text-align: center;
+  width: 30%;
+}
+.list-column2-center {
+  text-align: center;
+  width: 13%;
+}
+.list-column3-center {
+  text-align: center;
+  width: 12%;
+}
+.list-column4-center {
+  text-align: center;
+  width: 14%;
+}
+.list-column5-center {
+  text-align: center;
+  width: 15%;
+}
+.list-column6-center {
+  text-align: center;
+  width: 8%;
+}
+// style of each row
+.list-row1-background{
+  background:#FFFFFF;
+}
+.list-row2-background{
+  background:#F1F1F1;
+}
+
+.tableheader{
+    height: 50px;
+    background-color:#F1F1F1;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+/*--dataTable style end--*/
 
 
 /*--end of class for JSF element--*/

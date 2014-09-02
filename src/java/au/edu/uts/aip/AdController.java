@@ -22,8 +22,9 @@ public class AdController implements Serializable {
         return "managelist?faces-redirect=true";
     }
     
-    public void loadAd(int index){
-        ad = AdDatabase.read(index);
+    public void loadAd(String address) throws DataStoreException{
+        AdDAO dao = new AdDAO();
+        AdDTO ad = dao.findAd(address);
     }
     
     public String saveChanges(){

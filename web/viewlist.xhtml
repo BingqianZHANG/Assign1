@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Our Collections</title>
@@ -37,143 +38,71 @@
 						
 					</div>
 						<!--  end-header -->
+                                <!--side-bar start-->
+                                <div class="content">
+					<div style="float:left;" class="side-bar">
+						<h4>Find Your Property</h4>
+						<div class="side-bar-from">
+							
+							<p>Location:</p>
+							<h:inputText value="#"/>
+							<p>Property size:</p>
+							<h:inputText value="#"/>
+							<p>Property type:</p>
+							<h:inputText value="#"/>
+							<p>Availability:</p>
+							<h:inputText value="#"/>
+							<p>Furnished:</p>
+							<h:inputText value="#"/>
+                                                        <h:commandButton value="search" action="#"/>
+						
+						</div>
+					</div>
+				</div>
+                                <!--side-bar end-->
                                                 <!--properties list-->
-                                <div class="gallery">
+                                 <div class="gallery" style="float: right;">
                                     <h4>Our collections</h4>
-					<div class="grid">
-						<img src="./images/g1.png" title="img1"/>
-						<ul>
-							<li><p>Property Type:</p>
-							<a href="#">Villa</a></li>
-							<li><p>Address:</p>
-							<a href="#">9870 St Vincent Place</a></li>
-							<li><p>Land Area:</p>
-							<a href="#">29000 sq.ft</a></li>
-							<li><p>Year of the Built:</p>
-							<a href="#">2006</a></li>
-							<li><p> the Building Size:</p>
-							<a href="#">8000 sq.ft</a></li>
-							<li><p>Construction:</p>
-							<a href="#">Brick, glass</a></li>
-						</ul>
-						<div class="clear"> </div>
-						<div class="price">
-							<h3>$850`000</h3>
-							<a href="#">Details</a>
-							<div class="clear"> </div>
-						</div>
-					</div>
-			   <div style="margin:0px 25px;margin-top: 10px;" class="grid">
-						<img src="./images/g2.png" title="img1"/>
-						<ul>
-							<li><p>Property Type:</p>
-							<a href="#">Villa</a></li>
-							<li><p>Address:</p>
-							<a href="#">9870 St Vincent Place</a></li>
-							<li><p>Land Area:</p>
-							<a href="#">29000 sq.ft</a></li>
-							<li><p>Year of the Built:</p>
-							<a href="#">2006</a></li>
-							<li><p> the Building Size:</p>
-							<a href="#">8000 sq.ft</a></li>
-							<li><p>Construction:</p>
-							<a href="#">Brick, glass</a></li>
-						</ul>
-						<div class="clear"> </div>
-						<div class="price">
-							<h3>$1050`000</h3>
-							<a href="#">Details</a>
-						</div>
-					</div>
-		       <div class="grid">
-						<img src="./images/g3.png" title="img1"/>
-						<ul>
-							<li><p>Property Type:</p>
-							<a href="#">Villa</a></li>
-							<li><p>Address:</p>
-							<a href="#">9870 St Vincent Place</a></li>
-							<li><p>Land Area:</p>
-							<a href="#">29000 sq.ft</a></li>
-							<li><p>Year of the Built:</p>
-							<a href="#">2006</a></li>
-							<li><p> the Building Size:</p>
-							<a href="#">8000 sq.ft</a></li>
-							<li><p>Construction:</p>
-							<a href="#">Brick, glass</a></li>
-						</ul>
-						<div class="clear"> </div>
-						<div class="price">
-							<h3>$650`000</h3>
-							<a href="#">Details</a>
-						</div>
-					</div>
-					<div class="grid">
-						<img src="./images/g1.png" title="img1"/>
-						<ul>
-							<li><p>Property Type:</p>
-							<a href="#">Villa</a></li>
-							<li><p>Address:</p>
-							<a href="#">9870 St Vincent Place</a></li>
-							<li><p>Land Area:</p>
-							<a href="#">29000 sq.ft</a></li>
-							<li><p>Year of the Built:</p>
-							<a href="#">2006</a></li>
-							<li><p> the Building Size:</p>
-							<a href="#">8000 sq.ft</a></li>
-							<li><p>Construction:</p>
-							<a href="#">Brick, glass</a></li>
-						</ul>
-						<div class="clear"> </div>
-						<div class="price">
-							<h3>$850`000</h3>
-							<a href="#">Details</a>
-							<div class="clear"> </div>
-						</div>
-					</div>
-				<div style="margin:0px 25px;margin-top: 10px;" class="grid">
-						<img src="./images/g2.png" title="img1"/>
-						<ul>
-							<li><p>Property Type:</p>
-							<a href="#">Villa</a></li>
-							<li><p>Address:</p>
-							<a href="#">9870 St Vincent Place</a></li>
-							<li><p>Land Area:</p>
-							<a href="#">29000 sq.ft</a></li>
-							<li><p>Year of the Built:</p>
-							<a href="#">2006</a></li>
-							<li><p> the Building Size:</p>
-							<a href="#">8000 sq.ft</a></li>
-							<li><p>Construction:</p>
-							<a href="#">Brick, glass</a></li>
-						</ul>
-						<div class="clear"> </div>
-						<div class="price">
-							<h3>$1050`000</h3>
-							<a href="#">Details</a>
-						</div>
-					</div>
-		        <div class="grid">
-						<img src="./images/g3.png" title="img1"/>
-						<ul>
-							<li><p>Property Type:</p>
-							<a href="#">Villa</a></li>
-							<li><p>Address:</p>
-							<a href="#">9870 St Vincent Place</a></li>
-							<li><p>Land Area:</p>
-							<a href="#">29000 sq.ft</a></li>
-							<li><p>Year of the Built:</p>
-							<a href="#">2006</a></li>
-							<li><p> the Building Size:</p>
-							<a href="#">8000 sq.ft</a></li>
-							<li><p>Construction:</p>
-							<a href="#">Brick, glass</a></li>
-						</ul>
-						<div class="clear"> </div>
-						<div class="price">
-							<h3>$650`000</h3>
-							<a href="#">Details</a>
-						</div>
-					</div>
+                                   
+                                    <h:dataTable  var="ad"  value="#{adController.allAds}" style="text-align: center; " 
+                                                  styleClass="datatable" 
+                                                  rowClasses="list-row1-background ,list-row2-background" 
+                                                  columnClasses="list-column1-center,list-column2-center,list-column3-center,
+                                                                 list-column4-center,list-column5-center,list-column6-center"
+                                                  headerClass="tableheader">
+                                                                            <h:column>
+                                                                                <f:facet name="header">
+                                                                                    Address
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.address}"/>
+                                                                            </h:column>
+                                                                            <h:column>
+                                                                                <f:facet name="header">
+                                                                                    Property Type
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.type}"/>
+                                                                            </h:column>
+                                                                            
+                                                                            <h:column>
+                                                                                <f:facet name="header">
+                                                                                    Building size
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.size}"/>
+                                                                            </h:column>
+                                                                            <h:column>
+                                                                                <f:facet name="header">
+                                                                                    Year of the built
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.yearofbuilt}"/>
+                                                                            </h:column>
+                                                                            <h:column>
+                                                                                <f:facet name="header">
+                                                                                    Construction
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.construction}"/>
+                                                                            </h:column>
+                                                                            
+                                                                        </h:dataTable>
 					
 					
 				<div class="clear"> </div>
