@@ -8,7 +8,7 @@ public class Ad implements Serializable{
     private int id;
     private String address;
     private String type;
-    private Double size;
+    private int size;
     private int yearofbuilt;
     private String construction;
     
@@ -21,6 +21,7 @@ public class Ad implements Serializable{
         this.id =id;
     }
     
+    @Size(min=1)
     public String getAddress(){
         return address;
     }
@@ -29,6 +30,7 @@ public class Ad implements Serializable{
         this.address =address;
     }
     
+    @Size(min=1)
     public String getType(){
         return type;
     }
@@ -37,15 +39,16 @@ public class Ad implements Serializable{
         this.type=type;
     }
     
-    @Min(0)
-    public Double getSize() {
+    @Min(1)
+    public int getSize() {
         return size;
     }
 
-    public void setSize(Double size) {
+    public void setSize(int size) {
         this.size = size;
     }
     
+   @Min(1)
     public int getYearofbuilt() {
         return yearofbuilt;
     }
@@ -54,6 +57,7 @@ public class Ad implements Serializable{
         this.yearofbuilt= yearofbuilt;
     } 
     
+    @Size(min=1)
     public String getConstruction(){
         return construction;
     }
