@@ -60,16 +60,23 @@
                                                                                     <table>
 
                                                                                         <tr><td><p>Property type:</p></td></tr>
-                                                                                        <tr><td> <h:inputText value="#{adController.ad.type}"/></td></tr>
+                                                                                        <tr><td><h:inputText id="type" value="#{adController.ad.type}" validatorMessage="Please enter a property type."/></td></tr>
                                                                                         <tr><td><p>Address:</p></td></tr>
-                                                                                        <tr><td> <h:inputText value="#{adController.ad.address}"/></td></tr>
+                                                                                        <tr><td> <h:inputText id="address" value="#{adController.ad.address}" validatorMessage="Please enter the Address."/></td></tr>
                                                                                         <tr><td><p>the Building size:</p></td></tr>
-                                                                                        <tr><td> <h:inputText value="#{adController.ad.size}"/></td></tr>
+                                                                                        <tr><td><h:inputText id="size" value="#{adController.ad.size}" validatorMessage="Property size must over 1." converterMessage="You must enter a valid number"/></td></tr>
                                                                                         <tr><td><p>Year of the built:</p></td></tr>
-                                                                                        <tr><td> <h:inputText value="#{adController.ad.yearofbuilt}"/></td></tr>
+                                                                                        <tr><td> <h:inputText id="yearofbuilt" value="#{adController.ad.yearofbuilt}" validatorMessage="Please enter a valid year of built." converterMessage="You must enter a valid Year"/></td></tr>
                                                                                         <tr><td><p>Construction:</p></td></tr>
-                                                                                        <tr><td> <h:inputText value="#{adController.ad.construction}"/></td></tr>
-                                                                                        <tr><td> <h:commandButton value="Create" action="#{adController.saveAsnew()}"/></td></tr>
+                                                                                        <tr><td> <h:inputText id="construction" value="#{adController.ad.construction}" validatorMessage="Please enter the Construction."/></td></tr>
+                                                                                        <tr><td><h:message style="color: red;" for="type"/></td></tr>
+                                                                                        <tr><td><h:message style="color: red;" for="address"/></td></tr>
+                                                                                        <tr><td><h:message style="color: red;" for="size"/></td></tr>
+                                                                                        <tr><td><h:message style="color: red;" for="yearofbuilt"/></td></tr>
+                                                                                        <tr><td><h:message style="color: red;" for="construction"/></td></tr>
+                                                                                        <tr><td><h:commandButton value="Create" action="#{adController.saveAsnew()}"/>
+                                                                                                <h:button class="cancelbutton" value="Cancel" outcome="managelist"/>
+                                                                                            </td></tr>
                                                                                     </table>
 
                                                                                 </h:form>    

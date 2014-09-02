@@ -55,10 +55,11 @@
                                                             <h:form>
                                                                 <table>
                                                                     <tr><td><p>User Name:</p></td></tr>
-                                                                    <tr><td><h:inputText id="username" value="#"/></td></tr>
+                                                                    <tr><td><h:inputText id="username" value="#{accountController.username}"/></td></tr>
                                                                     <tr><td><p>Password:</p></td></tr>
-                                                                    <tr><td><h:inputText id="password" value="#"/></td></tr>
-                                                                    <tr><td><h:commandButton value="Log in" action="managelist"/></td></tr>
+                                                                    <tr><td><h:inputSecret class="secretinput" id="password" value="#{accountController.password}"/></td></tr>
+                                                                    <tr><td><h:messages style="color: red;"/></td></tr>
+                                                                    <tr><td><h:commandButton value="Log in" action="#{accountController.loginContainer}"/></td></tr>
                                                                     <tr><td><a href="createaccount.xhtml">I want to create a New Account</a></td></tr>
                                                                 </table>
                                                                

@@ -69,6 +69,63 @@ body{
 	float:left;
 	margin-top:20px;
 }
+
+/*--class for JSF element--*/
+.pwinput{
+    width:200px;
+	height: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9f9e9e;
+	background: #fff;
+	vertical-align: top;
+	padding: 4px 0px 4px 10px;
+	display: inline-block;
+	float: left;
+	border: 1px solid #e5e5e5;
+	outline:none;
+}
+
+.secretinput{
+    width:200px;
+	height: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #9f9e9e;
+	background: #fff;
+	vertical-align: top;
+	padding: 4px 0px 4px 10px;
+	display: inline-block;
+	float: left;
+	border: 1px solid #e5e5e5;
+	outline:none;
+}
+
+.cancelbutton {
+    font-family: Arial, Helvetica, sans-serif;
+		font-weight: normal;
+		font-size:12px;
+		text-transform: uppercase;
+		border:none;
+		cursor:pointer;
+		color: #fff;
+		display: inline-block;
+		background: url(../images/search_shape.png) 0 0 repeat-x #ca2514;
+		padding: 10px 15px;
+		font-weight:bold;
+		margin-top: 13px;
+		float:right;
+		margin-right: 8px
+}
+.cancelbutton:hover {
+	color: #fff;
+	text-decoration: none;
+	background: #252525;
+}
+
+
+
+/*--end of class for JSF element--*/
 .search-form input[type="text"]{
 	width: 170px;
 	height: 15px;
@@ -91,18 +148,19 @@ body{
 	margin-top: 26px;
 }
 .search-form input[type="submit"]{
-	background: url(../images/magn.png) 0 0px no-repeat;
+	background-color: red;
+        color: #fff;
 	display: inline-block;
 	vertical-align: top;
 	float: right;
-	width: 26px;
-	height: 25px;
+	width: 60px;
+	height: 30px;
 	margin: 0px 0px 0 0;
 	border: none;
 	cursor:pointer;
 }
 .search-form input[type="submit"]:hover{
-	background: url(../images/magn.png) 0 -25px no-repeat;
+	background-color: #252525;
 }
 .info p{
 	font-size: 14px;
@@ -277,6 +335,7 @@ body{
         background-color: #949393;
 }
 /*--end-of-side-list--*/
+
 /*---side-bar----*/
 .side-bar{
 	float:left;
@@ -314,7 +373,9 @@ body{
 	border: 1px solid #e5e5e5;
 	outline:none;
 }
-.side-bar-from input[type="submit"],.side-bar-from input[type="reset"]{
+
+
+.side-bar-from input[type="submit"],.side-bar-from input[type="reset"],button{
 	font-family: Arial, Helvetica, sans-serif;
 		font-weight: normal;
 		font-size:12px;
@@ -330,11 +391,13 @@ body{
 		float:right;
 		margin-right: 8px
 }
-.side-bar-from input[type="submit"]:hover,.side-bar-from input[type="reset"]:hover{
+.side-bar-from input[type="submit"]:hover,.side-bar-from input[type="reset"]:hover, button:hover{
 	color: #fff;
 	text-decoration: none;
 	background: #252525;
 }
+
+
 /*---gallery----*/
 .gallery{
 	float:right;

@@ -3,6 +3,7 @@
 package au.edu.uts.aip;
 
 import java.io.*;
+import java.util.ArrayList;
 import javax.enterprise.context.*;
 import javax.inject.*;
 
@@ -15,7 +16,6 @@ public class AdController implements Serializable {
     public Ad getAd() {
         return ad;
     }
-    
     
     public String saveAsnew(){
         AdDatabase.create(ad);
@@ -35,4 +35,10 @@ public class AdController implements Serializable {
         AdDatabase.delete(ad.getId());
         return "managelist?faces-redirect=true";
     }
+    
+           public ArrayList<AdDTO> getAllAds() throws DataStoreException {
+        return new AdDAO().findAll();
+    }
+
+    
 }    
