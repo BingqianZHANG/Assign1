@@ -14,6 +14,7 @@ public class AdController implements Serializable {
     private AdDTO ad = new AdDTO();
 
     public AdDTO getAd() {
+        //System.out.println("inside getAd");
         return ad;
     }
     
@@ -22,8 +23,10 @@ public class AdController implements Serializable {
         return "managelist?faces-redirect=true";
     }
     
-    public void loadAd(String address) throws DataStoreException{
-        ad =new AdDAO().findAd(address);
+    public void loadAd(int id) throws DataStoreException{
+//        System.out.println("Address: " + address);
+//        System.out.println("SDFSDFSDFDS");
+        ad =new AdDAO().findAd(id);
     }
     
     public String saveChanges(){

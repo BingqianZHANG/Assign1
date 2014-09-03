@@ -16,11 +16,11 @@ public class AdDAO {
     private static final String JNDI_NAME = "jdbc/aip";
     //SQL for select ad items
     private static final String SELECT_AD =
-            "select address,propertytype,buildingsize,yearofbuilt,construction " + "from ad ";
+            "select id,address,propertytype,buildingsize,yearofbuilt,construction " + "from ad ";
     //SQL for select all ads
     private static final String AD_ALL = SELECT_AD;
     //SQL for select ad with certain primary key
-    private static final String AD_ADDRESS = SELECT_AD + " where address = ?";
+    private static final String AD_ID = SELECT_AD + " where id = ?";
     //SQL for creat a new ad record
     private static final String INSERT_AD = "insert into ad (address,propertytype,buildingsize,yearofbuilt,construction) values" +
                                              "(?,?,?,?,?)";
@@ -29,6 +29,7 @@ public class AdDAO {
    
     private AdDTO createRowDTO(ResultSet rs) throws SQLException {
         AdDTO result = new AdDTO();
+        result.setId(rs.getInt("id"));
         result.setAddress(rs.getString("address"));
         result.setType(rs.getString("propertytype"));
         result.setSize(rs.getInt("buildingsize"));
@@ -80,22 +81,23 @@ public class AdDAO {
         
     }
     
-    //find a certain ad with selected address 
-    public AdDTO findAd(String address) throws DataStoreException {
+    //find a certain ad with selected id 
+    public AdDTO findAd(int id) throws DataStoreException {
+
         try {
             
             DataSource ds = InitialContext.doLookup(JNDI_NAME);
             try (Connection conn = ds.getConnection();
-                 PreparedStatement ps = conn.prepareStatement(AD_ADDRESS)) {
+                 PreparedStatement ps = conn.prepareStatement(AD_ID)) {
 
-                ps.setString(1, address);
+                ps.setInt(1, id);
                 
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
-                        // found address
+                        // found id
                         return createRowDTO(rs);
                     } else {
-                        // cannot find address
+                        // cannot find id
                         return null;
                     }
                 }

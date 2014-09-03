@@ -65,7 +65,7 @@
 				<!--start of adding agency property list-->
                                                     <div class="content">
                                                             <div style="position: relative;left: 10px; width: 700px " class="side-bar">
-                                                                <h2>Property list</h2>
+                                                                <h4>Property list</h4>
                                                                     <h1> </h1>
                                                                     <h:dataTable  var="ad"  value="#{adController.allAds}" style="text-align: center; "
                                                                                   styleClass="datatable" 
@@ -109,14 +109,19 @@
                                                                                     Delete
                                                                                 </f:facet>
                                                                                 <h:link value="Delete" outcome="deletead">
-                                                                                    <f:param name="index" value="#{ad.address}"/></h:link>
-                                                                                    
+                                                                                    <f:param name="index" value="#{ad.id}"/></h:link>
                                                                             </h:column>
+                                                                     <h:column>
+                                                                                <f:facet name="header">
+                                                                                    Id
+                                                                                </f:facet>
+                                                                                <h:outputText value="#{ad.id}"/>
+                                                                     </h:column>
                                                                             <h:column>
                                                                                 <f:facet name="header">
                                                                                     Edit
                                                                                 </f:facet>
-                                                                                <h:link value="Edit" outcome="editad?index=#{ad.address}"/>
+                                                                                <h:link value="Edit" outcome="editad?index=#{ad.id}"/>
                                                                             </h:column>
                                                                         </h:dataTable>
                                                                         <h:link value="Create New Ad" outcome="createad"/>

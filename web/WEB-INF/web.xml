@@ -37,6 +37,9 @@
         <web-resource-collection>
             <web-resource-name>secure</web-resource-name>
             <url-pattern>/faces/managelist.xhtml</url-pattern>
+            <url-pattern>/faces/createad.xhtml</url-pattern>
+            <url-pattern>/faces/editad.xhtml</url-pattern>
+            <url-pattern>/faces/deletead.xhtml</url-pattern>
             <url-pattern>/faces/secret/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>

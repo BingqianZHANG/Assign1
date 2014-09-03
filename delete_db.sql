@@ -1,3 +1,5 @@
-drop view jdbcrealm_user;
-drop view jdbcrealm_group;
-drop table account;
+-- drop view jdbcrealm_user;
+-- drop view jdbcrealm_group;
+-- drop table account;
+
+drop table ad;

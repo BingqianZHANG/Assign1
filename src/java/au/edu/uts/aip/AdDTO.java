@@ -11,11 +11,20 @@ import javax.validation.constraints.*;
 
 
 public class AdDTO implements Serializable{
+    private int id;
     private String address;
     private String type;
     private int size;
     private int yearofbuilt;
     private String construction;
+    
+    public int getId(){
+        return id;
+    }
+    
+    public void setId(int id){
+        this.id =id;
+    }
     
     @Size(min=1)
     public String getAddress(){

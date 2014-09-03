@@ -49,6 +49,19 @@ h3{
         background-color: #949393;
 }
 
+h4{
+	color: #2A2A2A;
+	font-family: "Agency FB" Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 29px;
+	text-transform: uppercase;
+	line-height: 35px;
+	padding: 15px 0px;
+	letter-spacing: 0px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 13px;
+}
+
 .wrap{
 	width:960px;
 	margin:0 auto;
