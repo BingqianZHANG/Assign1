@@ -7,7 +7,7 @@
 package au.edu.uts.aip;
 
 import java.io.Serializable;
-
+import javax.validation.constraints.*;
 
 
 public class AdDTO implements Serializable{
@@ -17,7 +17,7 @@ public class AdDTO implements Serializable{
     private int yearofbuilt;
     private String construction;
     
-    
+    @Size(min=1)
     public String getAddress(){
         return address;
     }
@@ -26,7 +26,7 @@ public class AdDTO implements Serializable{
         this.address =address;
     }
     
-    
+    @Size(min=1)
     public String getType(){
         return type;
     }
@@ -35,7 +35,7 @@ public class AdDTO implements Serializable{
         this.type=type;
     }
     
-    
+    @Min(1)
     public int getSize() {
         return size;
     }
@@ -44,7 +44,7 @@ public class AdDTO implements Serializable{
         this.size = size;
     }
     
-   
+    @Min(1)
     public int getYearofbuilt() {
         return yearofbuilt;
     }
@@ -53,7 +53,7 @@ public class AdDTO implements Serializable{
         this.yearofbuilt= yearofbuilt;
     } 
     
-    
+    @Size(min=1)
     public String getConstruction(){
         return construction;
     }

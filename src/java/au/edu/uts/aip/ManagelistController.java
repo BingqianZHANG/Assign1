@@ -1,6 +1,7 @@
 
 package au.edu.uts.aip;
 
+import au.edu.uts.aip.pre.Ad;
 import java.io.*;
 import java.util.*;
 import javax.enterprise.context.*;

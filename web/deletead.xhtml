@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
      <f:metadata>
-        <f:viewAction action="#{adController.loadAd(param.index)}"/>
+         <f:viewAction action="#{adController.loadAd(param.index)}"/>
     </f:metadata>
     <h:head>
         <title>Agency admin</title>
@@ -83,7 +83,7 @@
                                                                                         <tr><td> <h:outputText value="#{adController.ad.yearofbuilt}"/></td></tr>
                                                                                         <tr><td><p>Construction:</p></td></tr>
                                                                                         <tr><td> <h:outputText value="#{adController.ad.construction}"/></td></tr>
-                                                                                        <tr><td> <h:inputHidden value="#{adController.ad.id}"/>
+                                                                                        <tr><td> <h:inputHidden value="#{adController.ad.address}"/>
                                                                                                 <h:commandButton value="Delete" action="#{adController.delete}"/>
                                                                                                 <h:button class="cancelbutton" value="Cancel" outcome="managelist"/>
                                                                                                 

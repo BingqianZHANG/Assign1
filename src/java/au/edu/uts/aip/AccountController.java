@@ -12,10 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 
 @Named
 @RequestScoped
-public class AccountController {
-        private String username;
+public class AccountController implements Serializable{
+    private AccountDTO account = new AccountDTO();
+    
+    private String username;
     private String password;
 
+    public AccountDTO getAccount(){
+        return account;
+    }
+    
     public String getUsername() {
         return username;
     }
@@ -31,7 +37,7 @@ public class AccountController {
     public void setPassword(String password) {
         this.password = password;
     }
-    /* login container-managed*/
+    // login container-managed
     public String loginContainer() {
         FacesContext context= FacesContext.getCurrentInstance();
         HttpServletRequest request = (HttpServletRequest)context.getExternalContext().getRequest();
@@ -42,12 +48,11 @@ public class AccountController {
           
         } catch (ServletException e) {
           showError("Incorrect username or password.");
-          e.printStackTrace();
           return null;
         }
     }
     
-    /*logout the container-managed authentication*/
+    //logout the container-managed authentication
     public String logoutContainer() throws ServletException {
         FacesContext context= FacesContext.getCurrentInstance();
         HttpServletRequest request= (HttpServletRequest)context.getExternalContext().getRequest();
@@ -55,7 +60,12 @@ public class AccountController {
         return "welcome?faces-redirect=true";
     }
     
-    /*add error message to h:message element*/
+    //save new account
+    public String saveAccount() throws DataStoreException{
+        new AccountDAO().create(account);
+        return "managelist?faces-redirect=true";
+    }
+    //add error message to h:message element
     private void showError(String message) {
         FacesContext context= FacesContext.getCurrentInstance();
         context.addMessage(null, new FacesMessage(message));

@@ -11,33 +11,32 @@ import javax.inject.*;
 @Named
 @RequestScoped
 public class AdController implements Serializable {
-    private Ad ad = new Ad();
+    private AdDTO ad = new AdDTO();
 
-    public Ad getAd() {
+    public AdDTO getAd() {
         return ad;
     }
     
-    public String saveAsnew(){
-        AdDatabase.create(ad);
+    public String saveAsnew() throws DataStoreException{
+        new AdDAO().create(ad);
         return "managelist?faces-redirect=true";
     }
     
     public void loadAd(String address) throws DataStoreException{
-        AdDAO dao = new AdDAO();
-        AdDTO ad = dao.findAd(address);
+        ad =new AdDAO().findAd(address);
     }
     
     public String saveChanges(){
-        AdDatabase.update(ad);
+//        AdDatabase.update(ad);
         return "managelist?faces-redirect=true";
     }
     
     public String delete(){
-        AdDatabase.delete(ad.getId());
+//        AdDatabase.delete(ad.getId());
         return "managelist?faces-redirect=true";
     }
     
-           public ArrayList<AdDTO> getAllAds() throws DataStoreException {
+    public ArrayList<AdDTO> getAllAds() throws DataStoreException {
         return new AdDAO().findAll();
     }
 
