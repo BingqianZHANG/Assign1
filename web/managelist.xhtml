@@ -90,7 +90,7 @@
                                                                                 <f:facet name="header">
                                                                                     the Building size
                                                                                 </f:facet>
-                                                                                <h:outputText value="#{ad.size}"/>
+                                                                                <h:outputText value="#{ad.size} m²"/>
                                                                             </h:column>
                                                                             <h:column>
                                                                                 <f:facet name="header">
@@ -106,17 +106,20 @@
                                                                             </h:column>
                                                                             <h:column>
                                                                                 <f:facet name="header">
+                                                                                    view
+                                                                                </f:facet>
+                                                                                <h:link value="View" outcome="viewad">
+                                                                                    <f:param name="index" value="#{ad.id}"/></h:link>
+                                                                            </h:column>
+                                                                     
+                                                                        <h:column>
+                                                                                <f:facet name="header">
                                                                                     Delete
                                                                                 </f:facet>
                                                                                 <h:link value="Delete" outcome="deletead">
                                                                                     <f:param name="index" value="#{ad.id}"/></h:link>
                                                                             </h:column>
-                                                                     <h:column>
-                                                                                <f:facet name="header">
-                                                                                    Id
-                                                                                </f:facet>
-                                                                                <h:outputText value="#{ad.id}"/>
-                                                                     </h:column>
+                                                                     
                                                                             <h:column>
                                                                                 <f:facet name="header">
                                                                                     Edit
@@ -124,7 +127,7 @@
                                                                                 <h:link value="Edit" outcome="editad?index=#{ad.id}"/>
                                                                             </h:column>
                                                                         </h:dataTable>
-                                                                        <h:link value="Create New Ad" outcome="createad"/>
+                                                                    <h:button class="cancelbutton" value="Create New Ad" outcome="createad"/>
                                                                     
                                                             </div>
                                                     </div>
