@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Agency admin</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -75,7 +76,7 @@
                                                                                         <tr><td><p>Address:</p></td></tr>
                                                                                         <tr><td> <h:inputText id="address" value="#{adController.ad.address}" validatorMessage="Please enter the Address."/></td></tr>
                                                                                         <tr><td><p>the Building size:</p></td></tr>
-                                                                                        <tr><td><h:inputText id="size" value="#{adController.ad.size}" validatorMessage="Property size must over 1." converterMessage="You must enter a valid number"/></td></tr>
+                                                                                        <tr><td><h:inputText id="size" value="#{adController.ad.size}" validatorMessage="Property size must over 1." converterMessage="You must enter a valid number for building size."/> m²</td></tr>
                                                                                         <tr><td><p>Year of the built:</p></td></tr>
                                                                                         <tr><td> <h:inputText id="yearofbuilt" value="#{adController.ad.yearofbuilt}" validatorMessage="Please enter a valid year of built." converterMessage="You must enter a valid Year"/></td></tr>
                                                                                         <tr><td><p>Construction:</p></td></tr>

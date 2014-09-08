@@ -29,13 +29,15 @@ public class AdController implements Serializable {
         ad =new AdDAO().findAd(id);
     }
     
-    public String saveChanges(){
+    public String saveChanges() throws DataStoreException{
 //        AdDatabase.update(ad);
+        new AdDAO().update(ad);
         return "managelist?faces-redirect=true";
     }
     
-    public String delete(){
+    public String delete() throws DataStoreException{
 //        AdDatabase.delete(ad.getId());
+        new AdDAO().delete(ad.getId());
         return "managelist?faces-redirect=true";
     }
     

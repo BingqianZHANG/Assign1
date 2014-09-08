@@ -4,7 +4,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
      <f:metadata>
-        <f:viewAction action="#{adController.loadAd(param.index)}"/>
+         <f:viewAction action="#{adController.loadAd(param.index)}"/>
     </f:metadata>
     <h:head>
         <title>Agency admin</title>
@@ -14,6 +14,7 @@
 
     </h:head>
     <h:body>
+        
         <!--  start-wrap -->
 		<div class="wrap">
 			<!--  start-header -->
@@ -66,7 +67,7 @@
 				<!--start of adding Ad form-->
                                 <div class="content">
                                                             <div style="position: relative;left: 240px; width: 400px; " class="side-bar">
-                                                                <h2>Edit Ad</h2>
+                                                                <h2><h:outputText value="#{adController.ad.address}"/></h2>
                                                                     <h1> </h1>
                                                                     <div class="side-bar-from">
 
@@ -74,23 +75,17 @@
                                                                                     <table>
 
                                                                                         <tr><td><p>Property type:</p></td></tr>
-                                                                                        <tr><td> <h:inputText id="type" value="#{adController.ad.type}" validatorMessage="Please enter a property type."/></td></tr>
+                                                                                        <tr><td><h:outputText value="#{adController.ad.type}"/></td></tr>
                                                                                         <tr><td><p>Address:</p></td></tr>
-                                                                                        <tr><td> <h:inputText id="address" value="#{adController.ad.address}" validatorMessage="Please enter the Address."/></td></tr>
+                                                                                        <tr><td> <h:outputText value="#{adController.ad.address}"/></td></tr>
                                                                                         <tr><td><p>the Building size:</p></td></tr>
-                                                                                        <tr><td> <h:inputText id="size" value="#{adController.ad.size}" validatorMessage="Property size must over 1." converterMessage="You must enter a valid number for buiding size."/> m²</td></tr>
+                                                                                        <tr><td> <h:outputText value="#{adController.ad.size} m²"/></td></tr>
                                                                                         <tr><td><p>Year of the built:</p></td></tr>
-                                                                                        <tr><td> <h:inputText id="yearofbuilt" value="#{adController.ad.yearofbuilt}" validatorMessage="Please enter a valid year of built." converterMessage="You must enter a valid Year."/></td></tr>
+                                                                                        <tr><td> <h:outputText value="#{adController.ad.yearofbuilt}"/></td></tr>
                                                                                         <tr><td><p>Construction:</p></td></tr>
-                                                                                        <tr><td> <h:inputText id="construction" value="#{adController.ad.construction}" validatorMessage="Please enter the Construction."/></td></tr>
-                                                                                        <tr><td><h:inputHidden value="#{adController.ad.id}"/></td></tr>
-                                                                                        <tr><td><h:message style="color: red;" for="type"/></td></tr>
-                                                                                        <tr><td><h:message style="color: red;" for="address"/></td></tr>
-                                                                                        <tr><td><h:message style="color: red;" for="size"/></td></tr>
-                                                                                        <tr><td><h:message style="color: red;" for="yearofbuilt"/></td></tr>
-                                                                                        <tr><td><h:message style="color: red;" for="construction"/></td></tr>
-                                                                                        <tr><td><h:commandButton value="Save" action="#{adController.saveChanges()}"/>
-                                                                                                <h:button class="cancelbutton" value="Cancel" outcome="managelist"/>
+                                                                                        <tr><td> <h:outputText value="#{adController.ad.construction}"/></td></tr>
+                                                                                        <tr><td><h:button class="cancelbutton" value="back to list" outcome="managelist"/>
+                                                                                                
                                                                                             </td></tr>
                                                                                     </table>
 

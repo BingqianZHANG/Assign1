@@ -14,16 +14,25 @@ import javax.sql.*;
 public class AdDAO {
     
     private static final String JNDI_NAME = "jdbc/aip";
-    //SQL for select ad items
+    
+    //SQL 
+    //select ad items
     private static final String SELECT_AD =
             "select id,address,propertytype,buildingsize,yearofbuilt,construction " + "from ad ";
-    //SQL for select all ads
+    //select all ads
     private static final String AD_ALL = SELECT_AD;
-    //SQL for select ad with certain primary key
+    //select ad with certain primary key
     private static final String AD_ID = SELECT_AD + " where id = ?";
-    //SQL for creat a new ad record
+    //creat a new ad record
     private static final String INSERT_AD = "insert into ad (address,propertytype,buildingsize,yearofbuilt,construction) values" +
                                              "(?,?,?,?,?)";
+    //update a existing ad
+    private static final String UPDATE_AD ="update ad " +
+                                            "set address = ?,propertytype = ?,buildingsize = ?,yearofbuilt = ?,construction= ? " +
+                                            "where id = ? ";
+     //delete an an
+    private static final String DELETE_AD="delete from ad " +"where id = ?";
+    
     
     // implementation 
    
@@ -80,6 +89,49 @@ public class AdDAO {
         }
         
     }
+    
+    //update a existing ad
+    public void update(AdDTO ad) throws DataStoreException{
+        try {
+            
+            DataSource ds = InitialContext.doLookup(JNDI_NAME);
+            try (Connection conn = ds.getConnection();
+                 PreparedStatement ps = conn.prepareStatement(UPDATE_AD)) {
+
+                ps.setString(1, ad.getAddress());
+                ps.setString(2, ad.getType());
+                ps.setInt(3, ad.getSize());
+                ps.setInt(4, ad.getYearofbuilt());
+                ps.setString(5, ad.getConstruction());
+                ps.setInt(6, ad.getId());
+                
+                ps.executeUpdate();
+               
+            }
+        } catch (NamingException | SQLException e) {
+            throw new DataStoreException(e);
+        }
+        
+    }
+    
+    //delete a select ad
+    public void delete(int id) throws DataStoreException {
+
+        try {
+            
+            DataSource ds = InitialContext.doLookup(JNDI_NAME);
+            try (Connection conn = ds.getConnection();
+                 PreparedStatement ps = conn.prepareStatement(DELETE_AD)) {
+
+                ps.setInt(1, id);
+                
+                ps.executeUpdate();
+            }
+        } catch (NamingException | SQLException e) {
+            throw new DataStoreException(e);
+        }
+    } 
+    
     
     //find a certain ad with selected id 
     public AdDTO findAd(int id) throws DataStoreException {

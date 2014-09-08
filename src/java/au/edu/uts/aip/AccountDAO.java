@@ -1,5 +1,6 @@
 
 package au.edu.uts.aip;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.*;
 import javax.naming.*;
@@ -11,7 +12,7 @@ public class AccountDAO {
                                              "(?,?,?)";
     
     //create a new account
-    public void create(AccountDTO account) throws DataStoreException{
+    public void create(AccountDTO account) throws DataStoreException, NoSuchAlgorithmException{
         try {
             
             DataSource ds = InitialContext.doLookup(JNDI_NAME);
@@ -19,7 +20,7 @@ public class AccountDAO {
                  PreparedStatement ps = conn.prepareStatement(INSERT_ACCOUNT)) {
 
                 ps.setString(1, account.getUsername());
-                ps.setString(2, account.getPassword());
+                ps.setString(2, Sha.hash256(account.getPassword()));
                 ps.setString(3, account.getAgencyno());
                 
                 

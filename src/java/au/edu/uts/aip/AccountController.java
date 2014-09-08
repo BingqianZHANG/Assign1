@@ -2,6 +2,7 @@
 package au.edu.uts.aip;
 
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import javax.enterprise.context.*;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -17,6 +18,7 @@ public class AccountController implements Serializable{
     
     private String username;
     private String password;
+    private String cfmpwd;
 
     public AccountDTO getAccount(){
         return account;
@@ -37,14 +39,32 @@ public class AccountController implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public String getCfmpwd(){
+        return cfmpwd;
+    }
+    
+    public void setCfmpwd(String cfmpwd){
+        this.cfmpwd= cfmpwd;
+    }
+    
     // login container-managed
     public String loginContainer() {
         FacesContext context= FacesContext.getCurrentInstance();
         HttpServletRequest request = (HttpServletRequest)context.getExternalContext().getRequest();
         
         try {
-          request.login(username, password);
-          return "managelist?faces-redirect=true";
+          if (request.getRemoteUser() == null) {
+              // user is not logged in
+              request.login(username, password);
+          
+              return "managelist?faces-redirect=true";
+          
+          } else {
+              // user is logged in
+              return "managelist?faces-redirect=true";
+          }
+              
           
         } catch (ServletException e) {
           showError("Incorrect username or password.");
@@ -61,9 +81,19 @@ public class AccountController implements Serializable{
     }
     
     //save new account
-    public String saveAccount() throws DataStoreException{
-        new AccountDAO().create(account);
-        return "managelist?faces-redirect=true";
+    public String saveAccount() throws DataStoreException, NoSuchAlgorithmException{
+        try{
+            if(account.getPassword().equals(cfmpwd)){
+                new AccountDAO().create(account);
+                return "managelist?faces-redirect=true";
+            }else{
+                showError("These passwords do not match.");
+                return null;
+            }
+        }catch(DataStoreException e){
+            showError("The user name has already been taken. Please try another one.");
+            return null;
+        }
     }
     //add error message to h:message element
     private void showError(String message) {

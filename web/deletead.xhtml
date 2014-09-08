@@ -14,7 +14,7 @@
 
     </h:head>
     <h:body>
-        <h:outputText value="#{param.index}"/> <br/>
+        
         <!--  start-wrap -->
 		<div class="wrap">
 			<!--  start-header -->
@@ -67,7 +67,7 @@
 				<!--start of adding Ad form-->
                                 <div class="content">
                                                             <div style="position: relative;left: 240px; width: 400px; " class="side-bar">
-                                                                <h2>Do you want to delete this Ad?</h2>
+                                                                <h2>Are you sure to DELETE this Ad?</h2>
                                                                     <h1> </h1>
                                                                     <div class="side-bar-from">
 
@@ -79,7 +79,7 @@
                                                                                         <tr><td><p>Address:</p></td></tr>
                                                                                         <tr><td> <h:outputText value="#{adController.ad.address}"/></td></tr>
                                                                                         <tr><td><p>the Building size:</p></td></tr>
-                                                                                        <tr><td> <h:outputText value="#{adController.ad.size}"/></td></tr>
+                                                                                        <tr><td> <h:outputText value="#{adController.ad.size} m²"/></td></tr>
                                                                                         <tr><td><p>Year of the built:</p></td></tr>
                                                                                         <tr><td> <h:outputText value="#{adController.ad.yearofbuilt}"/></td></tr>
                                                                                         <tr><td><p>Construction:</p></td></tr>
